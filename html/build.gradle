@@ -67,3 +67,7 @@ sourceSets.main.java.srcDirs = [ "src/" ]
 eclipse.project {
     name = appName + "-html"
 }
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}

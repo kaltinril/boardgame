@@ -20,3 +20,7 @@ eclipse.project {
     name = appName + "-ios"
     natures 'org.robovm.eclipse.RoboVMNature'
 }
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
