@@ -1,6 +1,7 @@
 package com.kaltinril.boardgame;
 
 import com.badlogic.gdx.math.Rectangle;
+import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.utils.Array;
 
 /**
@@ -8,8 +9,9 @@ import com.badlogic.gdx.utils.Array;
  */
 
 class Land {
-    Rectangle boundary;     // Where is this on the game board
-    Array<Piece> pieces;    // What peices are on this land?
+    Rectangle boundary;             // Where is this on the game board
+    Array<Piece> pieces;            // What peices are on this land?
+    Array<PieceType> allowedTypes; // What types of pieces are allowed to go on this land?
 
     private int maxCapacity;
     private int currentCapacity;    // How many peices can fit on the board?
@@ -25,7 +27,7 @@ class Land {
 
 
             pieces.add(piece);
-            piece.setPosition();
+            piece.setPosition(new Vector2(0,0));
             currentCapacity -= piece.getSpace();    // Make sure we subtract the capacity
 
         }
