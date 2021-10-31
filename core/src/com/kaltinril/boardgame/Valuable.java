@@ -5,7 +5,7 @@ package com.kaltinril.boardgame;
  */
 
 class Valuable {
-    
+
     public Valuable(){
 
     }
